@@ -1,0 +1,82 @@
+import React from "react";
+import { FaArrowRight } from "react-icons/fa";
+
+const Portfolio = () => {
+  const projects = [
+    {
+      id: 1,
+      category: "UI-UX DESIGN",
+      title: "Product Admin Dashboard",
+      text: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+      image: "/images/project-1.jpg", // replace with your actual image
+    },
+    {
+      id: 2,
+      category: "UI-UX DESIGN",
+      title: "Product Admin Dashboard",
+      text: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+      image: "/images/project2.jpg",
+    },
+    {
+      id: 3,
+      category: "UI-UX DESIGN",
+      title: "Product Admin Dashboard",
+      text: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
+      image: "/images/project3.jpg",
+    },
+  ];
+  return (
+    <section className="py-20 px-6 md:px-12 bg-white">
+      <div className="max-w-7xl mx-auto text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-worksans font-semibold text-gray-900 mb-4">
+          Portfolio
+        </h2>
+        <p className="text-gray-500 max-w-2xl mx-auto">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration.
+        </p>
+      </div>
+
+      {/* Cards Grid */}
+      <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100"
+          >
+            {/* Image */}
+            <div className="w-full h-56 overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 text-left">
+              <p className="text-xs text-gray-400 tracking-wider mb-2">
+                {project.category}
+              </p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">{project.text}</p>
+
+              <button className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
+                Case Study <FaArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center mt-4">
+        <button className="bg-brand text-white font-semibold px-8 py-3 rounded-md shadow-md hover:opacity-90 transition cursor-pointer">
+          More Projects
+        </button>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-worksans: 'Work Sans', sans-serif;
+  --color-brand: #A53DFF;
+}
+
+@layer base {
+  h3 {
+    @apply font-worksans font-semibold;
+  }
+}
