@@ -1,5 +1,7 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import {FaGithub } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
+
 
 const Portfolio = () => {
   const projects = [
@@ -49,12 +51,12 @@ const Portfolio = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
               />
             </div>
 
             {/* Content */}
-            <div className="p-6 text-left">
+            <div className="p-6 text-center">
               <p className="text-xs text-gray-400 tracking-wider mb-2">
                 {project.category}
               </p>
@@ -63,14 +65,20 @@ const Portfolio = () => {
               </h3>
               <p className="text-gray-600 text-sm mb-4">{project.text}</p>
 
-              <button className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
-                Case Study <FaArrowRight className="w-4 h-4" />
-              </button>
+              <div className="flex gap-10 mt-4 justify-center">
+                <button className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
+                  Live <TbWorldWww className="w-5 h-5" />
+                </button>
+
+                <button className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
+                  Github <FaGithub className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-6">
         <button className="bg-brand text-white font-semibold px-8 py-3 rounded-md shadow-md hover:opacity-90 transition cursor-pointer">
           More Projects
         </button>
