@@ -1,32 +1,10 @@
 import React from "react";
 import {FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
-
+import { projects } from "../data/projects";
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      category: "UI-UX DESIGN",
-      title: "Product Admin Dashboard",
-      text: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-      image: "/images/project-1.jpg", // replace with your actual image
-    },
-    {
-      id: 2,
-      category: "UI-UX DESIGN",
-      title: "Product Admin Dashboard",
-      text: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-      image: "/images/project2.jpg",
-    },
-    {
-      id: 3,
-      category: "UI-UX DESIGN",
-      title: "Product Admin Dashboard",
-      text: "Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet lacus.",
-      image: "/images/project3.jpg",
-    },
-  ];
+  
   return (
     <section className="py-20 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
