@@ -8,6 +8,8 @@ import ProjectIdea from './components/ProjectIdea'
 import Blog from './components/Blog'
 import WhatIDo from './components/WhatIdo'
 import Clients from './components/Clients'
+import Testimonials from './components/Testimonials'
+import ContactForm from './components/ContactForm'
 
 
 const App = () => {
@@ -22,6 +24,8 @@ const App = () => {
       <Blog />
       <WhatIDo />
       <Clients />
+      <Testimonials />
+      <ContactForm />
     </div>
   )
 }
