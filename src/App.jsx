@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import Hero_1 from './components/Hero_1'
 import WorkProcess from './components/WorkProcess' 
 import Projects from './components/Projects'
+import ProjectIdea from './components/ProjectIdea'
+import Blog from './components/Blog'
 
 
 const App = () => {
@@ -14,6 +16,8 @@ const App = () => {
       <Hero_1 />
       <WorkProcess />
       <Projects />
+      <ProjectIdea />
+      <Blog />
     </div>
   )
 }
