@@ -28,7 +28,7 @@ const Hero = () => {
           <img
             src="/images/salsabeel.webp"
             alt="salsabeel-profile"
-            className="rounded-2xl w-80 h-100 md:w-96 shadow-lg"
+            className="rounded-2xl w-80 h-100 md:w-96 shadow-lg hover:scale-105 transition-transform duration-500 cursor-pointer"
           />
         </div>
       </div>

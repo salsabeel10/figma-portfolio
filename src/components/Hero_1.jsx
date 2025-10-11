@@ -10,7 +10,7 @@ const Hero_1 = () => {
           <img
             src="/images/salsabeel.webp" // Replace with your image
             alt="Profile"
-            className="w-64 h-72 object-cover rounded-2xl"
+            className="w-64 h-72 object-cover rounded-2xl hover:scale-105 transition-transform duration-500 cursor-pointer"
           />
 
           {/* Social icons */}

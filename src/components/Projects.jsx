@@ -3,7 +3,7 @@ import {FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 
 
-const Portfolio = () => {
+const Projects = () => {
   const projects = [
     {
       id: 1,
@@ -31,7 +31,7 @@ const Portfolio = () => {
     <section className="py-20 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-worksans font-semibold text-gray-900 mb-4">
-          Portfolio
+          Projects
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto">
           There are many variations of passages of Lorem Ipsum available, but
@@ -87,4 +87,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;
