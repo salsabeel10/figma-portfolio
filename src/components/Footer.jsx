@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2B384C] text-gray-300 py-8 px-6">
+      <footer className="bg-[#2B384C] text-gray-300 py-8 px-6 -mt-24 relative  z-0">  
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         
         {/* Left - Logo */}

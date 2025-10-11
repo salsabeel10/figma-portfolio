@@ -4,8 +4,8 @@ import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 
 const ContactForm = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-20 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-xl p-10 md:flex gap-10">
+    <section className="bg-gradient-to-b from-white py-28 px-6 md:px-16 relative z-10">
+      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-xl p-10 md:flex gap-10 relative z-10">
         {/* Left Side */}
         <div className="md:w-1/2 space-y-8">
           <div>
