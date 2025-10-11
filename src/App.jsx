@@ -10,6 +10,7 @@ import WhatIDo from './components/WhatIdo'
 import Clients from './components/Clients'
 import Testimonials from './components/Testimonials'
 import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
       <Clients />
       <Testimonials />
       <ContactForm />
+      <Footer />
     </div>
   )
 }
