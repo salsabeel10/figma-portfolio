@@ -1,34 +1,6 @@
-import { FaCalendarAlt, FaChartLine, FaPencilAlt, FaLaptopCode } from "react-icons/fa";
+import { steps } from "../data/steps";
 
 const WorkProcess = () => {
-    const steps = [
-    {
-      id: 1,
-      icon: <FaCalendarAlt />,
-      title: "Research",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
-      active: true,
-    },
-    {
-      id: 2,
-      icon: <FaChartLine />,
-      title: "Analyze",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
-    },
-    {
-      id: 3,
-      icon: <FaPencilAlt />,
-      title: "Design",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
-    },
-    {
-      id: 4,
-      icon: <FaLaptopCode />,
-      title: "Launch",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
-    },
-  ];
-
   return (
     <section className="py-20 px-6 md:px-12 bg-[#F0F1F3]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
@@ -50,29 +22,34 @@ const WorkProcess = () => {
 
         {/* Right Side - Cards */}
         <div className="grid sm:grid-cols-2 gap-6">
-          {steps.map((step) => (
-            <div
-              key={step.id}
-              className={`p-6 rounded-2xl shadow-sm bg-white hover:shadow-md transition 
-                ${step.active ? " " : "border-t-4 border-transparent"}`}
-            >
+          {steps.map((step) => {
+            const Icon = step.icon; //  assign the icon component
+            return (
               <div
-                className={`w-12 h-12 flex items-center justify-center rounded-lg mb-4 
-                ${step.active ? "bg-brand text-white" : "bg-purple-100 text-brand"}`}
+                key={step.id}
+                className={`p-6 rounded-2xl shadow-sm bg-white hover:shadow-md transition 
+                ${step.active ? "" : "border-t-4 border-transparent"}`}
               >
-                {step.icon}
-              </div>
+                <div
+                  className={`w-12 h-12 flex items-center justify-center rounded-lg mb-4 
+                  ${step.active ? "bg-brand text-white" : "bg-purple-100 text-brand"}`}
+                >
+                  <Icon /> 
+                </div>
 
-              <h3 className="font-semibold text-gray-900 mb-2">
-                {step.id}. {step.title}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{step.text}</p>
-            </div>
-          ))}
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  {step.id}. {step.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {step.text}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WorkProcess
+export default WorkProcess;
