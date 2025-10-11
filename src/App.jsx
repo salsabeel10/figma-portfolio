@@ -6,6 +6,8 @@ import WorkProcess from './components/WorkProcess'
 import Projects from './components/Projects'
 import ProjectIdea from './components/ProjectIdea'
 import Blog from './components/Blog'
+import WhatIDo from './components/WhatIdo'
+import Clients from './components/Clients'
 
 
 const App = () => {
@@ -18,6 +20,8 @@ const App = () => {
       <Projects />
       <ProjectIdea />
       <Blog />
+      <WhatIDo />
+      <Clients />
     </div>
   )
 }
