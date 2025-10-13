@@ -18,7 +18,7 @@ const Hero = () => {
             and user-centric design.
           </p>
 
-          <button className="mt-6 px-6 py-3 bg-brand text-white font-worksans font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer">
+          <button className="mt-6 px-6 py-3 bg-brand hover:bg-purple-700 text-white font-worksans font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer">
             Say Hello!
           </button>
         </div>

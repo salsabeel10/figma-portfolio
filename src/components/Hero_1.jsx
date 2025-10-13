@@ -46,7 +46,7 @@ const Hero_1 = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="px-6 py-3 bg-brand text-white font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer">
+            <button className="px-6 py-3 bg-brand hover:bg-purple-700 text-white font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer">
               My Project
             </button>
             <button className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center gap-2 cursor-pointer">

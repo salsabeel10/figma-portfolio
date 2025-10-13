@@ -14,7 +14,7 @@ const ProjectIdea = () => {
           There are many variations of passages of Lorem Ipsum available,
           but the majority have suffered alteration.
         </p>
-        <button className="bg-brand text-white font-semibold px-6 py-3 rounded-md transition inline-flex items-center cursor-pointer">
+        <button className="bg-brand hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-md transition inline-flex items-center cursor-pointer">
           Let’s work Together
           <span className="ml-2 text-lg">→</span>
         </button>

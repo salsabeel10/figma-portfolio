@@ -57,7 +57,7 @@ const Projects = () => {
         ))}
       </div>
       <div className="flex justify-center mt-6">
-        <button className="bg-brand text-white font-semibold px-8 py-3 rounded-md shadow-md hover:opacity-90 transition cursor-pointer">
+        <button className="bg-brand hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-md shadow-md hover:opacity-90 transition cursor-pointer">
           More Projects
         </button>
       </div>

@@ -7,7 +7,7 @@ const Footer = () => {
         
         {/* Left - Logo */}
         <div className="flex items-center space-x-3">
-          <div className="bg-purple-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center">
+          <div className="bg-brand hover:bg-purple-700 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
             S
           </div>
           <span className="text-white font-semibold text-lg">Salsabeel</span>

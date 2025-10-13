@@ -20,7 +20,7 @@ const WhatIDo = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
             arcu, varius eget velit non.
           </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-md text-sm transition">
+          <button className="bg-brand hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-md text-sm transition cursor-pointer">
             Say Hello!
           </button>
         </div>

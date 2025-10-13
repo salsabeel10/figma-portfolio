@@ -1,16 +1,16 @@
 import React from "react";
-import { FaFacebookF, FaDribbble, FaBehance, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaDribbble, FaBehance, FaInstagram, FaLinkedinIn, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 
 const ContactForm = () => {
   return (
-    <section className="bg-gradient-to-b from-white py-28 px-6 md:px-16 relative z-10">
-      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-xl p-10 md:flex gap-10 relative z-10">
+    <section className="bg-[linear-gradient(to_bottom,white_80%,#2B384C_20%)] py-28 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto bg-white shadow-[-6px_0_10px_-4px_rgba(0,0,0,0.2),6px_0_10px_-4px_rgba(0,0,0,0.2),0_-6px_10px_-4px_rgba(0,0,0,0.2)] rounded-xl p-10 md:flex gap-10">
         {/* Left Side */}
         <div className="md:w-1/2 space-y-8">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
-              Let’s discuss your <span className="text-purple-600">Project</span>
+              Let’s discuss your <span className="text-brand">Project</span>
             </h2>
             <p className="text-gray-500">
               There are many variations of passages of Lorem Ipsum available,
@@ -20,55 +20,51 @@ const ContactForm = () => {
 
           <div className="space-y-6">
             {/* Address */}
-            <div className="flex items-center space-x-4 bg-white shadow-md rounded-lg p-4">
+            <div className="flex items-center space-x-4 bg-white shadow-xl rounded-lg p-4">
               <div className="bg-purple-100 p-3 rounded-md">
-                <HiLocationMarker className="text-purple-600 text-xl" />
+                <HiLocationMarker className="text-brand text-xl" />
               </div>
               <div>
                 <p className="text-gray-400 text-sm">Address:</p>
-                <p className="font-medium text-gray-800">New Mexico 31134</p>
+                <p className="font-medium text-gray-800">Dubai , UAE</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 bg-white shadow-xl rounded-lg p-4">
               <div className="bg-purple-100 p-3 rounded-md">
-                <HiMail className="text-purple-600 text-xl" />
+                <HiMail className="text-brand text-xl" />
               </div>
               <div>
                 <p className="text-gray-400 text-sm">My Email:</p>
-                <p className="font-medium text-gray-800">mymail@mail.com</p>
+                <p className="font-medium text-gray-800">salsabeelibrahim14@gmail.com</p>
               </div>
             </div>
 
             {/* Phone */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 bg-white shadow-xl rounded-lg p-4 ">
               <div className="bg-purple-100 p-3 rounded-md">
-                <HiPhone className="text-purple-600 text-xl" />
+                <HiPhone className="text-brand text-xl" />
               </div>
               <div>
                 <p className="text-gray-400 text-sm">Call Me Now:</p>
-                <p className="font-medium text-gray-800">00-1234 00000</p>
+                <p className="font-medium text-gray-800">(+971) 55 594 6006</p>
               </div>
             </div>
           </div>
 
           {/* Social Icons */}
           <div className="flex space-x-4 pt-6">
-            <a href="#" className="bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-md">
-              <FaFacebookF />
+            <a href="#" className="text-brand hover:text-purple-700 text-xl">
+              <FaGithub />
             </a>
-            <a href="#" className="text-purple-600 hover:text-purple-700 text-xl">
-              <FaDribbble />
-            </a>
-            <a href="#" className="text-purple-600 hover:text-purple-700 text-xl">
-              <FaBehance />
-            </a>
-            <a href="#" className="text-purple-600 hover:text-purple-700 text-xl">
+            <a href="#" className="text-brand hover:text-purple-700 text-xl">
               <FaInstagram />
             </a>
-            <a href="#" className="text-purple-600 hover:text-purple-700 text-xl">
+            <a href="#" className="text-brand hover:text-purple-700 text-xl">
               <FaLinkedinIn />
+            </a><a href="#" className="text-brand hover:text-purple-700 text-xl">
+              <FaWhatsapp />
             </a>
           </div>
         </div>
@@ -131,7 +127,7 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="mt-4 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium flex items-center gap-2"
+              className="mt-4 bg-brand hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium flex items-center gap-2 cursor-pointer"
             >
               Submit <span className="text-lg">➜</span>
             </button>
