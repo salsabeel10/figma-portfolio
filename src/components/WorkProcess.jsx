@@ -2,7 +2,7 @@ import { steps } from "../data/steps";
 
 const WorkProcess = () => {
   return (
-    <section className="py-20 px-6 md:px-12 bg-[#F0F1F3]">
+    <section id="process" className="py-20 px-6 md:px-12 bg-[#F0F1F3]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* Left Side */}
         <div>

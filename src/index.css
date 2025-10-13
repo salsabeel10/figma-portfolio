@@ -11,3 +11,7 @@
     @apply font-worksans font-semibold;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}

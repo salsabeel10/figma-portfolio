@@ -6,7 +6,7 @@ const WhatIDo = () => {
   
 
   return (
-    <section className="bg-[#F0F1F3] py-20">
+    <section id="services" className="bg-[#F0F1F3] py-20">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         {/* Left side */}
         <div>

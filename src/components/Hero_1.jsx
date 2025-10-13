@@ -3,7 +3,7 @@ import React from 'react'
 
 const Hero_1 = () => {
   return (
-    <section className="flex justify-center py-20 px-4 bg-gradient-to-br from-purple-50 via-white to-green-50">
+    <section id="about" className="flex justify-center py-20 px-4 bg-gradient-to-br from-purple-50 via-white to-green-50">
       <div className="bg-white shadow-xl rounded-3xl p-8 md:p-14 flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full">
         {/* Left side - Image */}
         <div className="relative">

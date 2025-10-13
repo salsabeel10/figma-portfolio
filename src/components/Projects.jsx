@@ -6,7 +6,7 @@ import { projects } from "../data/projects";
 const Projects = () => {
   
   return (
-    <section className="py-20 px-6 md:px-12 bg-white">
+    <section id="project" className="py-20 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-worksans font-semibold text-gray-900 mb-4">
           Projects

@@ -14,16 +14,16 @@ const Nabar = () => {
 
         {/* Right Section: Nav Links */}
         <ul className="flex items-center space-x-6 text-gray-700 font-medium">
-          <li className="hover:text-purple-600 cursor-pointer">Home</li>
-          <li className="hover:text-purple-600 cursor-pointer">About</li>
-          <li className="hover:text-purple-600 cursor-pointer">Process</li>
-          <li className="hover:text-purple-600 cursor-pointer">Portfolio</li>
-          <li className="hover:text-purple-600 cursor-pointer">Blog</li>
-          <li className="hover:text-purple-600 cursor-pointer">Services</li>
+          <a href='#home' className="hover:text-purple-600 cursor-pointer">Home</a>
+          <a href='#about' className="hover:text-purple-600 cursor-pointer">About</a>
+          <a href='#process' className="hover:text-purple-600 cursor-pointer">Process</a>
+          <a href='#project' className="hover:text-purple-600 cursor-pointer">Porjects</a>
+          <a href='#blog' className="hover:text-purple-600 cursor-pointer">Blog</a>
+          <a href='#services'  className="hover:text-purple-600 cursor-pointer">Services</a>
           <li>
-            <button className="bg-brand hover:bg-purple-700 text-white px-4 py-1.5 rounded-md transition cursor-pointer">
+            <a href='#contact' className="bg-brand hover:bg-purple-700 text-white px-4 py-1.5 rounded-md transition cursor-pointer">
               Contact
-            </button>
+            </a>
           </li>
         </ul>
       </div>
