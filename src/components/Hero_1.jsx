@@ -1,18 +1,25 @@
-import { FaWhatsapp , FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
-import React from 'react'
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+} from "react-icons/fa";
+import React from "react";
 
 const Hero_1 = () => {
   return (
-    <section id="about" className="flex justify-center py-20 px-4 bg-gradient-to-br from-purple-50 via-white to-green-50">
+    <section
+      id="about"
+      className="flex justify-center py-20 px-4 bg-gradient-to-br from-purple-50 via-white to-green-50"
+    >
       <div className="bg-white shadow-xl rounded-3xl p-8 md:p-14 flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full">
         {/* Left side - Image */}
         <div className="relative">
           <img
-            src="/images/salsabeel.webp" // Replace with your image
+            src="/images/salsabeel-6.png"
             alt="Profile"
-            className="w-64 h-72 object-cover rounded-2xl hover:scale-105 transition-transform duration-500 cursor-pointer"
+            class="w-64 h-72 object-cover object-top rounded-2xl scale-125 hover:scale-115 transition-transform duration-500 cursor-pointer"
           />
-
           {/* Social icons */}
           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white shadow-md rounded-xl flex gap-4 px-6 py-3">
             <a href="#" className="text-brand hover:text-purple-700 transition">
@@ -36,12 +43,13 @@ const Hero_1 = () => {
             I am Professional User Experience Designer
           </h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            I design and develop services for customers specializing in creating stylish, modern websites,
-            web services, and online stores. My passion is to design digital user experiences.
+            I design and develop services for customers specializing in creating
+            stylish, modern websites, web services, and online stores. My
+            passion is to design digital user experiences.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            I design and develop services for customers specializing in creating stylish, modern websites,
-            and web services.
+            I design and develop services for customers specializing in creating
+            stylish, modern websites, and web services.
           </p>
 
           {/* Buttons */}
@@ -50,8 +58,19 @@ const Hero_1 = () => {
               My Project
             </button>
             <button className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center gap-2 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 4v16m8-8H4"
+                />
               </svg>
               Download CV
             </button>
@@ -59,7 +78,7 @@ const Hero_1 = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero_1
+export default Hero_1;
