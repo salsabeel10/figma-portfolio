@@ -16,7 +16,7 @@ const Hero_1 = () => {
         {/* Left side - Image */}
         <div className="relative">
           <img
-            src="/images/salsabeel-6.png"
+            src="/images/salsabeel-2.png"
             alt="Profile"
             class="w-64 h-72 object-cover object-top rounded-2xl scale-125 hover:scale-115 transition-transform duration-500 cursor-pointer"
           />

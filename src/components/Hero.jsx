@@ -36,7 +36,7 @@ const Hero = () => {
           {/* Right image */}
           <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
             <img
-              src="/images/salsabeel-7.png"
+              src="/images/salsabeel-1.png"
               alt="salsabeel-profile"
               class="w-72 h-80 md:w-80 md:h-96 rounded-2xl shadow-lg object-cover object-top"
             />
