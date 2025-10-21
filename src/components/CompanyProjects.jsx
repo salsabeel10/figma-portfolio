@@ -43,7 +43,9 @@ const CompanyProjects = () => {
               <p className="text-gray-600 text-sm mb-4">{project.text}</p>
 
               <div className="flex gap-10 mt-4 justify-center">
-                <button className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
+                <button 
+                  onClick={() => window.open(project.link, "_blank")}
+                  className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
                   Live <TbWorldWww className="w-5 h-5" />
                 </button>
               </div>
