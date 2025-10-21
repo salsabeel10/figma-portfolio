@@ -10,13 +10,17 @@ const WorkProcess = () => {
             Work Process
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
-            arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices
-            eget lorem ac vestibulum. Suspendis imperdiet.
+            Every project starts with understanding the problem and ends with
+            delivering a fast, scalable, and user-friendly solution. Here’s how
+            I build modern web applications from concept to deployment. I focus
+            on writing clean, maintainable code that ensures long-term stability
+            and easy updates. 
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
-            arcu, varius eget velit non.
+            Each project is built with performance, security,
+            and responsiveness in mind. I collaborate closely with clients to
+            align every feature with their business goals. From backend logic to
+            frontend design, I make sure every detail works seamlessly together.
           </p>
         </div>
 
@@ -32,9 +36,13 @@ const WorkProcess = () => {
               >
                 <div
                   className={`w-12 h-12 flex items-center justify-center rounded-lg mb-4 
-                  ${step.active ? "bg-brand text-white" : "bg-purple-100 text-brand"}`}
+                  ${
+                    step.active
+                      ? "bg-brand text-white"
+                      : "bg-purple-100 text-brand"
+                  }`}
                 >
-                  <Icon /> 
+                  <Icon />
                 </div>
 
                 <h3 className="font-semibold text-gray-900 mb-2">
