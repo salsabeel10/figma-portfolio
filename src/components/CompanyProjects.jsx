@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { companyProjects } from "../data/companyProject.js";
 
 const CompanyProjects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll
+    ? companyProjects
+    : companyProjects.slice(0, 3);
+
   return (
     <section id="project" className="py-20 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
@@ -11,14 +16,14 @@ const CompanyProjects = () => {
           Company Projects
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto">
-          A collection of my recent web development projects, showcasing modern
-          design, clean code, and practical functionality.
+          A showcase of the company websites I’ve built, focused on modern
+          design, performance, and seamless user experience.
         </p>
       </div>
 
       {/* Cards Grid */}
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {companyProjects.map((project) => (
+        {visibleProjects.map((project) => (
           <div
             key={project.id}
             className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100"
@@ -43,9 +48,10 @@ const CompanyProjects = () => {
               <p className="text-gray-600 text-sm mb-4">{project.text}</p>
 
               <div className="flex gap-10 mt-4 justify-center">
-                <button 
+                <button
                   onClick={() => window.open(project.link, "_blank")}
-                  className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
+                  className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer"
+                >
                   Live <TbWorldWww className="w-5 h-5" />
                 </button>
               </div>
@@ -54,8 +60,11 @@ const CompanyProjects = () => {
         ))}
       </div>
       <div className="flex justify-center mt-6">
-        <button className="bg-brand hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-md shadow-md hover:opacity-90 transition cursor-pointer">
-          More Projects
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="bg-brand hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-md shadow-md hover:opacity-90 transition cursor-pointer"
+        >
+          {showAll ? "Show Less" : "More Projects"}
         </button>
       </div>
     </section>
