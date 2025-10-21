@@ -1,19 +1,18 @@
 import React from "react";
-import {FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { projects } from "../data/projects";
 
-const Projects = () => {
-  
+const PersonalProjects = () => {
   return (
-    <section id="project" className="py-20 px-6 md:px-12 bg-white">
+    <section id="project" className="py-20 px-6 md:px-12 bg-[#F0F1F3]">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-worksans font-semibold text-gray-900 mb-4">
-          Projects
+          Personal Projects
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration.
+          A collection of my recent web development projects, showcasing modern
+          design, clean code, and practical functionality.
         </p>
       </div>
 
@@ -65,4 +64,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default PersonalProjects;
