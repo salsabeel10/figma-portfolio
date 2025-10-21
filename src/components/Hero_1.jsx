@@ -40,22 +40,30 @@ const Hero_1 = () => {
         {/* Right side - Content */}
         <div className="text-center pl-20 md:text-left max-w-xl mt-10 md:mt-0">
           <h2 className="text-3xl md:text-4xl font-worksans font-semibold text-gray-900 mb-4">
-            I am Professional User Experience Designer
+            I’m a Full-Stack Web Developer
           </h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            I design and develop services for customers specializing in creating
-            stylish, modern websites, web services, and online stores. My
-            passion is to design digital user experiences.
+            I design and build modern, responsive, and user-focused web
+            applications. My goal is to turn ideas into functional, beautiful,
+            and scalable digital experiences.
           </p>
           <p className="text-gray-600 mb-8 leading-relaxed">
-            I design and develop services for customers specializing in creating
-            stylish, modern websites, and web services.
+            💻 <strong>Tech Stack</strong>
+            <br />
+            <strong>Frontend:</strong> React, Next.js, Tailwind CSS, Bootstrap,
+            
+            <br />
+            <strong>Backend:</strong> Node.js, Express, TypeScript, JavaScript
+            <br />
+            <strong>Database:</strong> MongoDB, PostgreSQL
+            <br />
+            <strong>Others:</strong> Python, REST APIs, Git
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <button className="px-6 py-3 bg-brand hover:bg-purple-700 text-white font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer">
-              My Project
+            <button onClick={() => window.location.href = "#project"} className="px-6 py-3 bg-brand hover:bg-purple-700 text-white font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer">
+              My Projects
             </button>
             <button className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center gap-2 cursor-pointer">
               <svg

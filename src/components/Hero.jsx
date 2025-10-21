@@ -16,12 +16,12 @@ const Hero = () => {
             </h1>
 
             <p className="text-gray-600 mt-4 leading-relaxed">
-              I’m a Freelance{" "}
-              <span className="font-semibold text-gray-800">Web Developer</span>{" "}
-              and
+              I’m a{" "}
+              <span className="font-semibold text-gray-800">Software Engineer</span>{" "}
+              and Freelance
               <span className="font-semibold text-gray-800">
                 {" "}
-                Software Engineer{" "}
+                Web Developer{" "}
               </span>{" "}
               based in Dubai, UAE. I strive to build immersive and beautiful web
               applications through carefully crafted code and user-centric
