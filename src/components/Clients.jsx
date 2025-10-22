@@ -1,6 +1,6 @@
 import React from "react";
 import { clients } from "../data/clients";
-
+import Marquee from "react-fast-marquee";
 
 const Clients = () => {
   
@@ -15,17 +15,24 @@ const Clients = () => {
           There are many variations of passages of Lorem Ipsum available,
           but the majority have suffered alteration.
         </p>
+        <Marquee
+        pauseOnHover={true}
+        gradient={false}
+        speed={40}
+        className="opacity-80"
+      >
 
         <div className="flex flex-wrap items-center justify-center mt-15 gap-30 opacity-80">
           {clients.map((client, index) => (
             <img
-              key={index}
-              src={client.logo}
-              alt={client.name}
-              className="h-8 md:h-10 grayscale hover:grayscale-0 transition"
+            key={index}
+            src={client.logo}
+            alt={client.name}
+            className="h-8 md:h-10 grayscale hover:grayscale-0 transition"
             />
           ))}
         </div>
+        </Marquee>
       </div>
     </section>
   );
