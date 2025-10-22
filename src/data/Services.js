@@ -1,17 +1,17 @@
 export const services = [
     {
-      title: "User Experience (UX)",
+      title: "Frontend Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.",
+        "I build responsive, interactive interfaces using React, Next.js, Tailwind CSS, and TypeScript — ensuring smooth performance across all devices and browsers.",
     },
     {
-      title: "User Interface (UI)",
+      title: "Backend Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.",
+        "I create efficient server-side logic and REST APIs with Node.js, Express, and Python. My code focuses on speed, scalability, and data security.",
     },
     {
-      title: "Web Development",
+      title: "Database & Deployment",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.",
+        "I design and manage databases using MongoDB and PostgreSQL, and handle deployments through platforms like Vercel, Render, and Netlify for reliable hosting and CI/CD.",
     },
   ];

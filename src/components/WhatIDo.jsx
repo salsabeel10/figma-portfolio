@@ -1,10 +1,7 @@
 import React from "react";
 import { services } from "../data/Services";
 
-
 const WhatIDo = () => {
-  
-
   return (
     <section id="services" className="bg-[#F0F1F3] py-20">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
@@ -12,13 +9,14 @@ const WhatIDo = () => {
         <div>
           <h2 className="text-3xl font-bold text-gray-800 mb-4">What I do?</h2>
           <p className="text-gray-500 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
-            arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices
-            eget lorem ac vestibulum. Suspendis imperdiet,
+            I develop full-stack web applications that combine clean code, solid
+            architecture, and seamless functionality. My focus is on building
+            fast, secure, and scalable solutions that help businesses grow and
+            users stay engaged.
           </p>
           <p className="text-gray-500 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus
-            arcu, varius eget velit non.
+            From concept to deployment, I ensure every project delivers
+            performance, reliability, and a great user experience.
           </p>
           <button className="bg-brand hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-md text-sm transition cursor-pointer">
             Say Hello!
