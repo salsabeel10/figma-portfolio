@@ -17,8 +17,10 @@ const Hero = () => {
 
             <p className="text-gray-600 mt-4 leading-relaxed">
               I’m a{" "}
-              <span className="font-semibold text-gray-800">Software Engineer</span>{" "}
-              and Freelance
+              <span className="font-semibold text-gray-800">
+                Software Engineer
+              </span>{" "}
+              and
               <span className="font-semibold text-gray-800">
                 {" "}
                 Web Developer{" "}
@@ -38,7 +40,7 @@ const Hero = () => {
             <img
               src="/images/salsabeel-1.png"
               alt="salsabeel-profile"
-              class="w-72 h-80 md:w-80 md:h-96 rounded-2xl shadow-lg object-cover object-top"
+              className="w-72 h-80 md:w-80 md:h-96 rounded-2xl shadow-lg object-cover object-top transform transition duration-340 hover:scale-102 cursor-pointer"
             />
           </div>
         </div>
