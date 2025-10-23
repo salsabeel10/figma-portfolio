@@ -14,8 +14,7 @@ const ContactForm = () => {
               Let’s discuss your <span className="text-brand">Project</span>
             </h2>
             <p className="text-gray-500">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration.
+              Tell me about your ideas, goals, and vision — let’s make them real together.
             </p>
           </div>
 
@@ -73,7 +72,7 @@ const ContactForm = () => {
         {/* Right Side */}
         <div className="md:w-1/2 mt-10 md:mt-0">
           <p className="text-gray-500 mb-8">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+            Fill out the form below and share your project details. I’ll get back to you as soon as possible.
           </p>
 
           <form className="space-y-5">
