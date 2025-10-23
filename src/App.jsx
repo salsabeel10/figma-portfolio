@@ -1,5 +1,5 @@
 import React from 'react'
-import Nabar from './components/Nabar'
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Hero_1 from './components/Hero_1'
 import WorkProcess from './components/WorkProcess' 
@@ -17,7 +17,7 @@ import What from './components/What'
 const App = () => {
   return (
     <div>
-      <Nabar />
+      <Navbar />
       <Hero />
       <Hero_1 />
       <WorkProcess />
