@@ -6,11 +6,12 @@ import WorkProcess from './components/WorkProcess'
 import PersonalProjects from './components/PersonalProjects'
 import ProjectIdea from './components/ProjectIdea'
 import Blog from './components/Blog'
-import WhatIDo from './components/WhatIdo'
+
 import Clients from './components/Clients'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import CompanyProjects from './components/CompanyProjects'
+import Whatido from './components/WhatIdo'
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
       <PersonalProjects />
       <ProjectIdea />
       <Clients />
-      <WhatIDo />
+      <Whatido />
       <Blog />
       <ContactForm />
       <Footer />
