@@ -1,5 +1,6 @@
 import React from "react";
 import { services } from "../data/Services";
+import { whatsapp } from "../data/links";
 
 const What = () => {
   return (
@@ -18,7 +19,7 @@ const What = () => {
             From concept to deployment, I ensure every project delivers
             performance, reliability, and a great user experience.
           </p>
-          <button className="bg-brand hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-md text-sm transition cursor-pointer">
+          <button onClick={()=>window.open(whatsapp)} className="bg-brand hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-md text-sm transition cursor-pointer">
             Say Hello!
           </button>
         </div>
