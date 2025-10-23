@@ -26,7 +26,6 @@ const App = () => {
       <Clients />
       <WhatIDo />
       <Blog />
-      {/* <Testimonials /> */}
       <ContactForm />
       <Footer />
     </div>
