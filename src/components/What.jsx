@@ -1,7 +1,7 @@
 import React from "react";
 import { services } from "../data/Services";
 
-const WhatIdo = () => {
+const What = () => {
   return (
     <section id="services" className="bg-[#F0F1F3] py-20">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
@@ -44,4 +44,4 @@ const WhatIdo = () => {
   );
 };
 
-export default WhatIdo;
+export default What;

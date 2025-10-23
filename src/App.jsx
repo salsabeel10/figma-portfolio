@@ -10,7 +10,8 @@ import Clients from './components/Clients'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import CompanyProjects from './components/CompanyProjects'
-import WhatIdo from './components/WhatIdo'
+import What from './components/What'
+
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
       <PersonalProjects />
       <ProjectIdea />
       <Clients />
-      <WhatIdo />
+      <What />
       <Blog />
       <ContactForm />
       <Footer />
