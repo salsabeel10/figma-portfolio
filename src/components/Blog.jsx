@@ -24,7 +24,7 @@ const Blog = () => {
                 <img
                   src={card.img}
                   alt={card.title}
-                  className="w-full h-48 grayscale object-cover hover:scale-105 transition-transform duration-500 hover:filter-none cursor-pointer"
+                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500 hover:filter-none cursor-pointer"
                 />
               </a>
               <div className="p-4">
