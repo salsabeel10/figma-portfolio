@@ -1,10 +1,10 @@
-import AlAliTech from "../assets/logos/alalitech.png";
+import alalitech from "../assets/logos/alalitech.png";
 import alaliyachts from "../assets/logos/alaliyachts.png";
-import Majestic from "../assets/logos/majestic.png";
-import SeaRiders from "../assets/logos/seariders.png";
-import UniqDubai from "../assets/logos/uniqdubai.png";
-import Wake2Wake from "../assets/logos/wake2wake.png";
-import XpressMarine from "../assets/logos/xpress.png";
+import majestic from "../assets/logos/majestic.png";
+import seariders from "../assets/logos/seariders.png";
+import uniqdubai from "../assets/logos/uniqdubai.png";
+import wake2wake from "../assets/logos/wake2wake.png";
+import xpressmarine from "../assets/logos/xpressmarine.png";
 import xtremeyacht from "../assets/logos/xtremeyacht.png";
 import xtremewake from "../assets/logos/xtremewake.png";
 
@@ -15,11 +15,11 @@ export const clients = [
     },
     {
       name: "Majestic Rent a Car",
-      logo: Majestic,
+      logo: majestic,
     },
     {
       name: "Uniq Dubai",
-      logo: UniqDubai,
+      logo: uniqdubai,
     },
     {
       name: "Xtreme Yacht",
@@ -27,7 +27,7 @@ export const clients = [
     },
     {
       name: "Sea Riders",
-      logo: SeaRiders,
+      logo: seariders,
     },
     {
       name: "Xtreme Wake",
@@ -35,14 +35,14 @@ export const clients = [
     },
     {
       name: "Xpress Marine",
-      logo: XpressMarine,
+      logo: xpressmarine,
     },
     {
       name: "Wake 2 Wake",
-      logo: Wake2Wake,
+      logo: wake2wake,
     },
     {
       name: "Al Ali Tech",
-      logo: AlAliTech,
+      logo: alalitech,
     },
   ];
