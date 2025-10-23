@@ -16,7 +16,7 @@ const Clients = () => {
           pauseOnHover={true}
           gradient={false}
           speed={40}
-          className="opacity-80"
+          className="opacity-100"
         >
           <div className="flex items-center gap-8 md:gap-18 px-4 md:px-8">
             {clients.map((client, index) => (
