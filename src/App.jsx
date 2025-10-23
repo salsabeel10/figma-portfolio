@@ -24,7 +24,7 @@ const App = () => {
       <CompanyProjects />
       <PersonalProjects />
       <ProjectIdea />
-      <Clients />
+      
       <What />
       <Blog />
       <ContactForm />
