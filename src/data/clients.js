@@ -1,12 +1,13 @@
-import AlAliTech from "../assets/logos/alalitech1.png";
+import AlAliTech from "../assets/logos/alalitech.png";
 import alaliyachts from "../assets/logos/alaliyachts.png";
-import Majestic from "../assets/logos/MEJESTIC.png";
-import SeaRiders from "../assets/logos/searider.png";
-import UniqDubai from "../assets/logos/uniqdubai1.png";
+import Majestic from "../assets/logos/majestic.png";
+import SeaRiders from "../assets/logos/seariders.png";
+import UniqDubai from "../assets/logos/uniqdubai.png";
 import Wake2Wake from "../assets/logos/wake2wake.png";
-import XpressMarine from "../assets/logos/xpressmarine.png";
+import XpressMarine from "../assets/logos/xpress.png";
 import xtremeyacht from "../assets/logos/xtremeyacht.png";
 import xtremewake from "../assets/logos/xtremewake.png";
+
 export const clients = [
     {
       name: "Al Ali Yachts",

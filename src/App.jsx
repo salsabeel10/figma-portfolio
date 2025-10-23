@@ -8,7 +8,6 @@ import ProjectIdea from './components/ProjectIdea'
 import Blog from './components/Blog'
 import WhatIDo from './components/WhatIdo'
 import Clients from './components/Clients'
-import Testimonials from './components/Testimonials'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import CompanyProjects from './components/CompanyProjects'
@@ -24,10 +23,10 @@ const App = () => {
       <CompanyProjects />
       <PersonalProjects />
       <ProjectIdea />
-      <Blog />
-      <WhatIDo />
       <Clients />
-      <Testimonials />
+      <WhatIDo />
+      <Blog />
+      {/* <Testimonials /> */}
       <ContactForm />
       <Footer />
     </div>

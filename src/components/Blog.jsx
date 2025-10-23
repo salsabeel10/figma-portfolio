@@ -1,21 +1,21 @@
 import React from "react";
-import { cards } from "../data/cards";
+import { blogs } from "../data/blogs.js";
 
 const Blog = () => {
   return (
     <section id="blog" className="py-20 px-6 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-worksans font-semibold text-gray-900 mb-4">
-          Blogs
+          Worth Reading
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto">
-          There are Blogs Many variations of passages of Lorem Ipsum available,
-          but the majority have suffered alteration.
+          A collection of great articles and tutorials that I found useful while
+          learning and improving my work.
         </p>
       </div>
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {cards.map((card) => (
+          {blogs.map((card) => (
             <div
               key={card.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
