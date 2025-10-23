@@ -5,7 +5,7 @@ const Hero = () => {
     <div>
       <section
         id="home"
-        className="bg-gradient-to-br from-purple-50 to-green-50"
+        className="bg-gradient-to-br from-purple-50 to-green-50 mt-5"
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12 py-20">
           {/* Left text content */}
