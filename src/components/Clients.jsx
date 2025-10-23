@@ -24,7 +24,7 @@ const Clients = () => {
                 key={index}
                 src={client.logo}
                 alt={client.name}
-                className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition cursor-pointer"
+                className="h-10 md:h-14 object-contain transition cursor-pointer"
               />
             ))}
           </div>

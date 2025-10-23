@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaDribbble, FaBehance, FaInstagram, FaLinkedinIn, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
+import { github, instagram, linkedin, whatsapp } from "../data/links";
 
 const ContactForm = () => {
   return (
@@ -55,15 +56,15 @@ const ContactForm = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4 pt-6">
-            <a href="#" className="text-brand hover:text-purple-700 text-xl">
+            <a href={github} className="text-brand hover:text-purple-700 text-xl">
               <FaGithub />
             </a>
-            <a href="#" className="text-brand hover:text-purple-700 text-xl">
+            <a href={instagram} className="text-brand hover:text-purple-700 text-xl">
               <FaInstagram />
             </a>
-            <a href="#" className="text-brand hover:text-purple-700 text-xl">
+            <a href={linkedin} className="text-brand hover:text-purple-700 text-xl">
               <FaLinkedinIn />
-            </a><a href="#" className="text-brand hover:text-purple-700 text-xl">
+            </a><a href={whatsapp} className="text-brand hover:text-purple-700 text-xl">
               <FaWhatsapp />
             </a>
           </div>

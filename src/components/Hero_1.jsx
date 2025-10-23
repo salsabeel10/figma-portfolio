@@ -5,6 +5,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import React from "react";
+import { github, instagram, linkedin, whatsapp } from "../data/links";
 
 const Hero_1 = () => {
   return (
@@ -22,16 +23,16 @@ const Hero_1 = () => {
           />
           {/* Social icons */}
           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white shadow-md rounded-xl flex gap-4 px-6 py-3">
-            <a href="#" className="text-brand hover:text-purple-700 transition">
+            <a href={whatsapp} className="text-brand hover:text-purple-700 transition">
               <FaWhatsapp />
             </a>
-            <a href="#" className="text-brand hover:text-purple-700 transition">
+            <a href={instagram} className="text-brand hover:text-purple-700 transition">
               <FaInstagram />
             </a>
-            <a href="#" className="text-brand hover:text-purple-700 transition">
+            <a href={linkedin} className="text-brand hover:text-purple-700 transition">
               <FaLinkedinIn />
             </a>
-            <a href="#" className="text-brand hover:text-purple-700 transition">
+            <a href={github} className="text-brand hover:text-purple-700 transition">
               <FaGithub />
             </a>
           </div>
