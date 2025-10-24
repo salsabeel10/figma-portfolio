@@ -1,8 +1,5 @@
 import React from "react";
 import {
-  FaFacebookF,
-  FaDribbble,
-  FaBehance,
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
@@ -10,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import { github, instagram, linkedin, whatsapp } from "../data/links";
+import Form from "./Form";
 
 const ContactForm = () => {
   return (
@@ -102,72 +100,9 @@ const ContactForm = () => {
             Fill out the form below and share your project details. I’ll get
             back to you as soon as possible.
           </p>
-
-          <form className="space-y-5">
-            <div>
-              <label className="block text-sm text-gray-700 mb-1">Name*</label>
-              <input
-                type="text"
-                className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm text-gray-700 mb-1">Email*</label>
-              <input
-                type="email"
-                className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm text-gray-700 mb-1">
-                Location
-              </label>
-              <input
-                type="text"
-                className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
-              />
-            </div>
-
-            <div className="flex gap-4">
-              <div className="w-1/2">
-                <label className="block text-sm text-gray-700 mb-1">
-                  Budget*
-                </label>
-                <input
-                  type="text"
-                  className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
-                />
-              </div>
-              <div className="w-1/2">
-                <label className="block text-sm text-gray-700 mb-1">
-                  Subject*
-                </label>
-                <input
-                  type="text"
-                  className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm text-gray-700 mb-1">
-                Message*
-              </label>
-              <textarea
-                rows="3"
-                className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="mt-4 bg-brand hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium flex items-center gap-2 cursor-pointer"
-            >
-              Submit <span className="text-lg">➜</span>
-            </button>
-          </form>
+          {/* Form field here */}
+          <Form />
+          
         </div>
       </div>
     </section>
