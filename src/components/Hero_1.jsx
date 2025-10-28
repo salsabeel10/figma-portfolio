@@ -19,7 +19,7 @@ const Hero_1 = () => {
           <img
             src="/images/salsabeel-2.png"
             alt="Profile"
-            class="w-64 h-72 object-cover object-top rounded-2xl scale-110 hover:scale-115 transition-transform duration-500 cursor-pointer"
+            className="w-64 h-72 object-cover object-top rounded-2xl scale-110 hover:scale-115 transition-transform duration-500 cursor-pointer"
           />
           {/* Social icons */}
           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white shadow-md rounded-xl flex gap-4 px-6 py-3">
