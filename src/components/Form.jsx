@@ -1,8 +1,11 @@
+import { ToastContainer, toast } from 'react-toastify';
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 
 const Form = () => {
   const form = useRef();
+  const success = () => toast.success('Form Submitted !');
+  const fail = () => toast.error('Error !!');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,11 +23,11 @@ const Form = () => {
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
-          alert("Message sent!");
+          success();
         },
         (error) => {
           console.error("Error sending email:", error.text);
-          alert("Failed to send message, please try again.");
+          fail();
         }
       );
   };
@@ -86,6 +89,7 @@ const Form = () => {
         >
           Submit <span className="text-lg">➜</span>
         </button>
+        <ToastContainer position="top-center" />
       </form>
     </div>
   );
