@@ -89,7 +89,6 @@ const Form = () => {
         >
           Submit <span className="text-lg">➜</span>
         </button>
-        <ToastContainer position="top-center" />
       </form>
     </div>
   );

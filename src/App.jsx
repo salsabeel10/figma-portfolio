@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify';
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -25,11 +26,11 @@ const App = () => {
       <CompanyProjects />
       <PersonalProjects />
       <ProjectIdea />
-      
       <What />
       <Blog />
       <ContactForm />
       <Footer />
+      <ToastContainer position="top-center" />
     </div>
   )
 }
