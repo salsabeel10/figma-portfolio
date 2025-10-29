@@ -24,6 +24,7 @@ const Form = () => {
         (result) => {
           console.log("Email sent successfully:", result.text);
           success();
+          form.current.reset();
         },
         (error) => {
           console.error("Error sending email:", error.text);

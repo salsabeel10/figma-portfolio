@@ -24,6 +24,7 @@ const App = () => {
       <Hero_1 />
       <WorkProcess />
       <CompanyProjects />
+      <Clients />
       <PersonalProjects />
       <ProjectIdea />
       <What />
