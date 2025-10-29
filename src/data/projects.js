@@ -22,7 +22,7 @@ export const projects = [
   category: "Web App",
   title: "Azan App",
   text: "A clean and modern prayer time app with accurate Azan timings and real-time countdown.",
-  image: "/projects/project-6.png",
+  image: "/projects/project-6.jpg",
   live: "https://azan-app1.netlify.app/", 
   github: "https://github.com/salsabeel10/azan-app",
 },
