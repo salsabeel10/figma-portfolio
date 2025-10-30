@@ -9,29 +9,53 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
         {/* Left Section: Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-brand hover:bg-purple-700 text-white rounded-full flex items-center justify-center font-bold cursor-pointer">
-            S
+          <div className="w-13 h-13 rounded-full overflow-hidden cursor-pointer hover:ring-2 hover:ring-gray-400 transition">
+            <img
+              src="./images/salsabeel-2.png"
+              alt="Salsabeel Ibrahim"
+              className="w-full h-full object-cover"
+            />
           </div>
-          <h3 className="text-xl font-semibold text-gray-900">Salsabeel Ibrahim</h3>
+          <h3 className="text-xl font-semibold text-gray-900">
+            Salsabeel Ibrahim
+          </h3>
         </div>
 
         {/* Desktop Nav Links */}
         <ul className="hidden md:flex items-center space-x-6 text-gray-700 font-medium">
-          <a href="#home" className="hover:text-purple-600 cursor-pointer">Home</a>
-          <a href="#about" className="hover:text-purple-600 cursor-pointer">About</a>
-          <a href="#process" className="hover:text-purple-600 cursor-pointer">Process</a>
-          <a href="#project" className="hover:text-purple-600 cursor-pointer">Projects</a>
-          <a href="#blog" className="hover:text-purple-600 cursor-pointer">Blog</a>
-          <a href="#services" className="hover:text-purple-600 cursor-pointer">Services</a>
+          <a href="#home" className="hover:text-purple-600 cursor-pointer">
+            Home
+          </a>
+          <a href="#about" className="hover:text-purple-600 cursor-pointer">
+            About
+          </a>
+          <a href="#process" className="hover:text-purple-600 cursor-pointer">
+            Process
+          </a>
+          <a href="#project" className="hover:text-purple-600 cursor-pointer">
+            Projects
+          </a>
+          <a href="#services" className="hover:text-purple-600 cursor-pointer">
+            Services
+          </a>
+          <a href="#blog" className="hover:text-purple-600 cursor-pointer">
+            Blog
+          </a>
           <li>
-            <a href="#contact" className="bg-brand hover:bg-purple-700 text-white px-4 py-1.5 rounded-md transition cursor-pointer">
+            <a
+              href="#contact"
+              className="bg-brand hover:bg-purple-700 text-white px-4 py-1.5 rounded-md transition cursor-pointer"
+            >
               Contact
             </a>
           </li>
         </ul>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden text-2xl text-gray-800 cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className="md:hidden text-2xl text-gray-800 cursor-pointer"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           {menuOpen ? <FiX /> : <FiMenu />}
         </div>
       </div>
@@ -39,12 +63,48 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <ul className="md:hidden bg-white shadow-md flex flex-col items-center space-y-4 py-4 text-gray-700 font-medium">
-          <a href="#home" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#about" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#process" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Process</a>
-          <a href="#project" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Projects</a>
-          <a href="#blog" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Blog</a>
-          <a href="#services" className="hover:text-purple-600" onClick={() => setMenuOpen(false)}>Services</a>
+          <a
+            href="#home"
+            className="hover:text-purple-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className="hover:text-purple-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </a>
+          <a
+            href="#process"
+            className="hover:text-purple-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            Process
+          </a>
+          <a
+            href="#project"
+            className="hover:text-purple-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            Projects
+          </a>
+          <a
+            href="#services"
+            className="hover:text-purple-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            Services
+          </a>
+          <a
+            href="#blog"
+            className="hover:text-purple-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            Blog
+          </a>
           <a
             href="#contact"
             className="bg-brand hover:bg-purple-700 text-white px-4 py-1.5 rounded-md transition"
