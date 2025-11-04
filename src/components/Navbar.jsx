@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
         {/* Left Section: Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-13 h-13 rounded-full overflow-hidden cursor-pointer hover:ring-2 hover:ring-gray-400 transition">
+          <div className="w-11 h-11 rounded-full overflow-hidden cursor-pointer hover:ring-2 hover:ring-gray-400 transition">
             <img
               src="./images/salsabeel-2.png"
               alt="Salsabeel Ibrahim"

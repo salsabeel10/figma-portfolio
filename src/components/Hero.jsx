@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import CountUp from "react-countup";
 import { whatsapp } from "../data/links";
 
 const Hero = () => {
+  const [showYears, setShowYears] = useState(false);
   return (
     <div>
       <section
@@ -47,20 +49,40 @@ const Hero = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="max-w-5xl mx-auto mt-10 bg-[#EDD8FF80] rounded-xl flex flex-col md:flex-row justify-between text-center divide-y md:divide-y-0 md:divide-x divide-purple-200 overflow-hidden cursor-pointer">
-          <div className="flex-1 py-6 hover:bg-purple-200/60 transition">
-            <h3 className="text-3xl font-bold text-[#424E60]">+2 Y.</h3>
-            <p className="text-[#697484] ">Experience</p>
-          </div>
-          <div className="flex-1 py-6 hover:bg-purple-200/60 transition">
-            <h3 className="text-3xl font-bold text-[#424E60]">250+</h3>
-            <p className="text-[#697484]">Project Completed</p>
-          </div>
-          <div className="flex-1 py-6 hover:bg-purple-200/60 transition">
-            <h3 className="text-3xl font-bold text-[#424E60]">58</h3>
-            <p className="text-[#697484]">Happy Client</p>
-          </div>
-        </div>
+         <div className="max-w-5xl mx-auto mt-10 bg-[#EDD8FF80] rounded-xl flex flex-col md:flex-row justify-between text-center divide-y md:divide-y-0 md:divide-x divide-purple-200 overflow-hidden cursor-pointer">
+      <div className="flex-1 py-6 hover:bg-purple-200/60 transition">
+        <h3 className="text-3xl font-bold text-[#424E60]">
+          {showYears ? (
+          "+2 Y."
+        ) : (
+          <>
+            +
+            <CountUp
+              end={24}
+              duration={2}
+              onEnd={() => setShowYears(true)}
+            />{" "}
+            M.
+          </>
+        )}
+        </h3>
+        <p className="text-[#697484]">Experience</p>
+      </div>
+
+      <div className="flex-1 py-6 hover:bg-purple-200/60 transition">
+        <h3 className="text-3xl font-bold text-[#424E60]">
+          <CountUp end={250} duration={3} />+
+        </h3>
+        <p className="text-[#697484]">Project Completed</p>
+      </div>
+
+      <div className="flex-1 py-6 hover:bg-purple-200/60 transition">
+        <h3 className="text-3xl font-bold text-[#424E60]">
+          <CountUp end={40} duration={3} />+
+        </h3>
+        <p className="text-[#697484]">Happy Client</p>
+      </div>
+    </div>
       </section>
     </div>
   );
