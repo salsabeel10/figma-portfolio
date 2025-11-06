@@ -1,41 +1,61 @@
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = () => {
   const form = useRef();
-  const success = () => toast.success('Form Submitted !');
-  const fail = () => toast.error('Error !!');
+  const recaptchaRef = useRef();
 
-  const sendEmail = (e) => {
+  const success = () => toast.success("Form Submitted!");
+  const fail = () => toast.error("Error!");
+
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    const currentTime = new Date().toLocaleString();
-    form.current.time.value = currentTime;
+    const formEl = form.current;
 
-    emailjs
-      .sendForm(
+    // 1. Honeypot check
+    if (formEl._gotcha.value) {
+      console.warn("Bot detected – message blocked.");
+      return;
+    }
+
+    // 2. reCAPTCHA check
+    const token = recaptchaRef.current.getValue();
+    if (!token) {
+      alert("Please verify that you're not a robot.");
+      return;
+    }
+
+    // 3. Add timestamp
+    const currentTime = new Date().toLocaleString();
+    formEl.time.value = currentTime;
+
+    // 4. Send email
+    try {
+      const result = await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
+        formEl,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
-          success();
-          form.current.reset();
-        },
-        (error) => {
-          console.error("Error sending email:", error.text);
-          fail();
-        }
       );
+      console.log("Email sent successfully:", result.text);
+      success();
+      recaptchaRef.current.reset(); // reset reCAPTCHA
+      formEl.reset();
+    } catch (error) {
+      console.error("Error sending email:", error.text);
+      fail();
+    }
   };
+
   return (
     <div>
       <form ref={form} onSubmit={sendEmail} className="space-y-5">
+        <input type="text" name="_gotcha" style={{ display: "none" }} />
         <input type="hidden" name="time" />
+
         <div>
           <label className="block text-sm text-gray-700 mb-1">Name*</label>
           <input
@@ -55,9 +75,12 @@ const Form = () => {
             className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
           />
         </div>
+
         <div className="flex gap-4">
           <div className="w-1/2">
-            <label className="block text-sm text-gray-700 mb-1">Phone No.*</label>
+            <label className="block text-sm text-gray-700 mb-1">
+              Phone No.*
+            </label>
             <input
               type="number"
               name="phone"
@@ -83,6 +106,12 @@ const Form = () => {
             className="w-full border-b-2 border-gray-200 focus:border-purple-500 outline-none py-2"
           ></textarea>
         </div>
+
+        {/* ✅ React-based reCAPTCHA */}
+        <ReCAPTCHA
+          sitekey="6LfdSAQsAAAAABmIHSyRKtlhuWVaI4oS5zTerhzc"
+          ref={recaptchaRef}
+        />
 
         <button
           type="submit"
