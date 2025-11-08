@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { companyProjects } from "../data/companyProject.js";
 import { motion } from "framer-motion";

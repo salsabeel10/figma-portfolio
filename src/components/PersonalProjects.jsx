@@ -2,12 +2,25 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { projects } from "../data/projects";
+import { motion } from "framer-motion";
 
 const PersonalProjects = () => {
   const [showAll, setShowAll] = useState(false);
     const visibleProjects = showAll
       ? projects
       : projects.slice(0, 3);
+  
+  const cardVariants = {
+    hidden: { opacity: 0 },
+    visible: (i) => ({
+      opacity: 1,
+      transition: {
+        delay: i * 0.25, // slightly more delay between each card
+        duration: 1.8, // slower, smoother fade
+        ease: [0.22, 1, 0.36, 1], // beautiful smooth "easeOut" feel
+      },
+    }),
+  };
 
   return (
     <section id="project" className="py-20 px-6 md:px-12 bg-[#F0F1F3]">
@@ -23,10 +36,15 @@ const PersonalProjects = () => {
 
       {/* Cards Grid */}
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {visibleProjects.map((project) => (
-          <div
+        {visibleProjects.map((project,index) => (
+          <motion.div
             key={project.id}
             className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            custom={index}
+            viewport={{ once: true, amount: 0.2 }}
           >
             {/* Image */}
             <div className="w-full h-56 overflow-hidden">
@@ -61,7 +79,7 @@ const PersonalProjects = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
       <div className="flex justify-center mt-6">
