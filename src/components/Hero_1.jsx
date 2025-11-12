@@ -5,7 +5,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import React from "react";
-import { github, instagram, linkedin, whatsapp } from "../data/links";
+import { github, instagram, linkedin, whatsapp,resume } from "../data/links";
 
 const Hero_1 = () => {
   return (
@@ -81,21 +81,15 @@ const Hero_1 = () => {
             >
               My Projects
             </button>
+
             <a
-              href="https://drive.google.com/file/d/1VynRwqDZicE_hkmT2TvxQOcRnFElYErp/view?usp=sharing"
+              href={resume}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
 
-            <button
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1VynRwqDZicE_hkmT2TvxQOcRnFElYErp/view?usp=sharing",
-                  "_blank"
-                )
-              }
-              className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center justify-center gap-2 cursor-pointer"
+            <button className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center justify-center gap-2 cursor-pointer"
               >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +108,7 @@ const Hero_1 = () => {
               Download CV
             </button>
           </a>
-          
+
           </div>
         </div>
       </div>
