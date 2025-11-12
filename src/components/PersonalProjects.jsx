@@ -44,7 +44,7 @@ const PersonalProjects = () => {
             initial="hidden"
             whileInView="visible"
             custom={index}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             {/* Image */}
             <div className="w-full h-56 overflow-hidden">
