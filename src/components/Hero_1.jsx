@@ -82,14 +82,10 @@ const Hero_1 = () => {
               My Projects
             </button>
 
-            <a
-              href={resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-
-            <button className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center justify-center gap-2 cursor-pointer"
+            
+            <button 
+              onClick={() => window.open(resume, "_blank")}
+              className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center justify-center gap-2 cursor-pointer"
               >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +103,7 @@ const Hero_1 = () => {
               </svg>
               Download CV
             </button>
-          </a>
+          
 
           </div>
         </div>
