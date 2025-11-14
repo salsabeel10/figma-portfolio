@@ -4,10 +4,13 @@ import {
   FaLinkedinIn,
   FaWhatsapp,
   FaGithub,
+  FaPhone,
+  FaPhoneAlt,
 } from "react-icons/fa";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import { github, instagram, linkedin, whatsapp } from "../data/links";
 import Form from "./Form";
+import { PiPhone, PiPhoneCallBold, PiPhoneCallFill } from "react-icons/pi";
 
 const ContactForm = () => {
   return (
@@ -56,11 +59,18 @@ const ContactForm = () => {
             {/* Phone */}
             <div className="flex items-center space-x-4 bg-white shadow-xl rounded-lg p-4 ">
               <div className="bg-purple-100 p-3 rounded-md">
-                <HiPhone className="text-brand text-xl" />
+                <FaWhatsapp className="text-brand text-xl" />
               </div>
               <div>
-                <p className="text-gray-400 text-sm">Call Me Now:</p>
-                <p className="font-medium text-gray-800">(+971) 55 594 6006</p>
+                <p className="text-gray-400 text-sm">Message Me on WhatsApp:</p>
+                <a
+                  href={whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-gray-800 hover:underline"
+                >
+                  Chat on WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -89,7 +99,7 @@ const ContactForm = () => {
               href={whatsapp}
               className="text-brand hover:text-purple-700 text-xl"
             >
-              <FaWhatsapp />
+              <HiPhone />
             </a>
           </div>
         </div>
@@ -102,7 +112,6 @@ const ContactForm = () => {
           </p>
           {/* Form field here */}
           <Form />
-          
         </div>
       </div>
     </section>
