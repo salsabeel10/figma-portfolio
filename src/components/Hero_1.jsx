@@ -18,7 +18,7 @@ const Hero_1 = () => {
         <div className="relative">
           <img
             src="/images/salsabeel-2.png"
-            alt="Profile"
+            alt="Salsabeel Ibrahim, FullStack Developer"
             className="w-64 h-72 object-cover object-top rounded-2xl scale-110 hover:scale-115 transition-transform duration-500 cursor-pointer"
           />
           {/* Social icons */}

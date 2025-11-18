@@ -14,7 +14,7 @@ const Hero = () => {
           {/* Left text content */}
           <div className="max-w-xl">
             <h1 className="text-5xl md:text-6xl font-worksans font-semibold text-gray-900 leading-tight">
-              Hello, I’m{" "}
+              Hello, I'm{" "}
               <span className="text-gray-900">Salsabeel Ibrahim</span>
             </h1>
 
@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
             <img
               src="/images/salsabeel-1.png"
-              alt="salsabeel-profile"
+              alt="Salsabeel Ibrahim, Software Engineer"
               className="w-72 h-80 md:w-80 md:h-96 rounded-2xl shadow-lg object-cover object-top transform transition duration-500 hover:scale-103 hover:shadow-[0_0_30px_rgba(163,61,255,0.5)] cursor-pointer"
             />
           </div>
