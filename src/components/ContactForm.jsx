@@ -48,9 +48,10 @@ const ContactForm = () => {
               <div className="bg-purple-100 p-3 rounded-md">
                 <HiMail className="text-brand text-xl" />
               </div>
-              <div>
+
+              <div className="flex-1 min-w-0">
                 <p className="text-gray-400 text-sm">My Email:</p>
-                <p className="font-medium text-gray-800 break-words overflow-hidden text-sm sm:text-base">
+                <p className="font-medium text-gray-800 break-words">
                   salsabeelibrahim14@gmail.com
                 </p>
               </div>

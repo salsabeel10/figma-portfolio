@@ -108,10 +108,12 @@ const Form = () => {
         </div>
 
         {/* ✅ React-based reCAPTCHA */}
-        <ReCAPTCHA
-          sitekey="6LfdSAQsAAAAABmIHSyRKtlhuWVaI4oS5zTerhzc"
-          ref={recaptchaRef}
-        />
+        <div className="recaptcha-wrapper">
+          <ReCAPTCHA
+            sitekey="6LfdSAQsAAAAABmIHSyRKtlhuWVaI4oS5zTerhzc"
+            ref={recaptchaRef}
+          />
+        </div>
 
         <button
           type="submit"

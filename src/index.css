@@ -15,3 +15,23 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Wrapper takes full width but keeps reCAPTCHA on the left */
+.recaptcha-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* LEFT aligned */
+}
+
+/* Scale the reCAPTCHA on small screens */
+.recaptcha-wrapper > div {
+  transform: scale(0.85);   /* adjust if needed */
+  transform-origin: left top;
+}
+
+/* On screens wider than ~400px, return to normal size */
+@media (min-width: 400px) {
+  .recaptcha-wrapper > div {
+    transform: scale(1);
+  }
+}
