@@ -1,4 +1,4 @@
-import aiImg from "../assets/blog/ai.jpg";
+import aiImg from "../assets/blog/ai.webp";
 import aiTool from "../assets/blog/ai-tools.webp";
 import reactImg from "../assets/blog/reactJs.png";
 import shadcnImg from "../assets/blog/shadcn-ui.png";
