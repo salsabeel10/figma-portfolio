@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-2">
           <div className="w-11 h-11 rounded-full overflow-hidden cursor-pointer hover:ring-2 hover:ring-gray-400 transition">
             <img
-              src="./images/salsabeel-2.png"
+              src="./images/salsabeel-2.webp"
               alt="Salsabeel Ibrahim"
               className="w-full h-full object-cover"
             />

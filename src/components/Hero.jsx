@@ -45,7 +45,7 @@ const Hero = () => {
           {/* Right image */}
           <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
             <img
-              src="/images/salsabeel-1.png"
+              src="/images/salsabeel-1.webp"
               alt="Salsabeel Ibrahim, Software Engineer"
               className="w-72 h-80 md:w-80 md:h-96 rounded-2xl shadow-lg object-cover object-top transform transition duration-500 hover:scale-103 hover:shadow-[0_0_30px_rgba(163,61,255,0.5)] cursor-pointer"
             />
