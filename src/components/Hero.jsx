@@ -18,7 +18,7 @@ const Hero = () => {
               <span className="text-gray-900">Salsabeel Ibrahim</span>
             </h1>
 
-            <p className="text-gray-600 mt-4 leading-relaxed">
+            <h2 className="text-gray-600 mt-4 leading-relaxed">
               I’m a{" "}
               <span className="font-semibold text-gray-800">
                 Software Engineer
@@ -31,7 +31,7 @@ const Hero = () => {
               based in Dubai, UAE. I strive to build immersive and beautiful web
               applications through carefully crafted code and user-centric
               design.
-            </p>
+            </h2>
 
             <button
               onClick={() => window.open(whatsapp)}
