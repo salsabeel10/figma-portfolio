@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 
 const PersonalProjects = () => {
   const [showAll, setShowAll] = useState(false);
-    const visibleProjects = showAll
-      ? projects
-      : projects.slice(0, 3);
-  
+  const visibleProjects = showAll
+    ? projects
+    : projects.slice(0, 3);
+
   const cardVariants = {
     hidden: { opacity: 0 },
     visible: (i) => ({
@@ -36,7 +36,7 @@ const PersonalProjects = () => {
 
       {/* Cards Grid */}
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {visibleProjects.map((project,index) => (
+        {visibleProjects.map((project, index) => (
           <motion.div
             key={project.id}
             className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100"
@@ -51,6 +51,7 @@ const PersonalProjects = () => {
               <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
               />
             </div>
@@ -66,13 +67,13 @@ const PersonalProjects = () => {
               <p className="text-gray-600 text-sm mb-4">{project.text}</p>
 
               <div className="flex gap-10 mt-4 justify-center">
-                <button 
+                <button
                   onClick={() => window.open(project.live, "_blank")}
                   className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
                   Live <TbWorldWww className="w-5 h-5" />
                 </button>
 
-                <button 
+                <button
                   onClick={() => window.open(project.github, "_blank")}
                   className="flex items-center gap-2 text-brand font-semibold text-sm border border-brand rounded-md px-4 py-2 hover:bg-brand hover:text-white transition cursor-pointer">
                   Github <FaGithub className="w-5 h-5" />
