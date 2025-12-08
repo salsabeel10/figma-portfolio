@@ -2,7 +2,6 @@ import { ToastContainer } from 'react-toastify';
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Hero_1 from './components/Hero_1'
 import WorkProcess from './components/WorkProcess' 
 import PersonalProjects from './components/PersonalProjects'
 import ProjectIdea from './components/ProjectIdea'
@@ -12,6 +11,7 @@ import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import CompanyProjects from './components/CompanyProjects'
 import What from './components/What'
+import About from './components/About';
 
 
 
@@ -21,7 +21,7 @@ const App = () => {
     <div>
       <Navbar />
       <Hero />
-      <Hero_1 />
+      <About />
       <WorkProcess />
       <CompanyProjects />
       <Clients />

@@ -7,7 +7,7 @@ import {
 import React from "react";
 import { github, instagram, linkedin, whatsapp,resume } from "../data/links";
 
-const Hero_1 = () => {
+const About = () => {
   return (
     <section
       id="about"
@@ -112,4 +112,4 @@ const Hero_1 = () => {
   );
 };
 
-export default Hero_1;
+export default About;
