@@ -5,7 +5,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import React from "react";
-import { github, instagram, linkedin, whatsapp,resume } from "../data/links";
+import { github, instagram, linkedin, whatsapp, resume } from "../data/links";
 
 const About = () => {
   return (
@@ -25,24 +25,36 @@ const About = () => {
           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white shadow-md rounded-xl flex gap-4 px-6 py-3">
             <a
               href={whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open WhatsApp"
               className="text-brand hover:text-purple-700 transition"
             >
               <FaWhatsapp />
             </a>
             <a
               href={instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Instagram"
               className="text-brand hover:text-purple-700 transition"
             >
               <FaInstagram />
             </a>
             <a
               href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Linkedin"
               className="text-brand hover:text-purple-700 transition"
             >
               <FaLinkedinIn />
             </a>
             <a
               href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Github"
               className="text-brand hover:text-purple-700 transition"
             >
               <FaGithub />
@@ -82,29 +94,26 @@ const About = () => {
               My Projects
             </button>
 
-            
-            <button 
+            <button
               onClick={() => window.open(resume, "_blank")}
               className="px-6 py-3 border border-brand text-brand font-semibold rounded-md hover:bg-brand hover:text-white transition flex items-center justify-center gap-2 cursor-pointer"
-              >
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                >
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M12 4v16m8-8H4"
-                  />
+                />
               </svg>
               Download CV
             </button>
-          
-
           </div>
         </div>
       </div>

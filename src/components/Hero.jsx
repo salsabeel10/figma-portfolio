@@ -33,13 +33,14 @@ const Hero = () => {
               design.
             </h2>
 
-            <button
-              onClick={() => window.open(whatsapp)}
-              className="mt-6 px-6 py-3 bg-brand hover:bg-purple-700 text-white font-worksans font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer"
+            <a
+              href={whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 px-6 py-3 bg-brand hover:bg-purple-700 text-white font-worksans font-semibold rounded-md shadow-sm hover:opacity-90 transition cursor-pointer inline-block"
             >
               Say Hello!
-              
-            </button>
+            </a>
           </div>
 
           {/* Right image */}
