@@ -34,7 +34,7 @@ const Hero = () => {
             </h2>
 
             <a
-              id="say-hello-btn"
+              data-cta="say-hello"
               href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"

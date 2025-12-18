@@ -20,7 +20,7 @@ const What = () => {
             performance, reliability, and a great user experience.
           </p>
           <button  
-            id="say-hello-btn1"
+            data-cta="say-hello"
             onClick={()=>window.open(whatsapp)} className="bg-brand hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-md text-sm transition cursor-pointer">
               Say Hello!
           </button>
