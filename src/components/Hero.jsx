@@ -1,9 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
+import { supabase } from "../lib/supabase";
 import CountUp from "react-countup";
 import { whatsapp } from "../data/links";
 
 const Hero = () => {
   const [showYears, setShowYears] = useState(false);
+  const [heroData, setHeroData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    const fetchHero = async () => {
+      const { data, error } = await supabase
+        .from("site_settings")
+        .select("hero_name, hero_subtitle")
+        .single();
+
+      if (error) {
+        setError(error.message);
+      } else {
+        setHeroData(data);
+      }
+
+      setLoading(false);
+    };
+
+    fetchHero();
+    
+  }, []);
+
+  if (loading) return null; // or skeleton
+  if (error) return null;
   return (
     <div>
       <section
@@ -28,9 +54,7 @@ const Hero = () => {
                 {" "}
                 Web Developer{" "}
               </span>{" "}
-              based in Dubai, UAE. I strive to build immersive and beautiful web
-              applications through carefully crafted code and user-centric
-              design.
+              {heroData ? heroData.hero_subtitle : "Based in Dubai, UAE. I strive to build immersive and beautiful web applications through carefully crafted code and user-centric design."}
             </h2>
 
             <a
