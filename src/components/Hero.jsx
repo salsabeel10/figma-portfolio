@@ -26,7 +26,7 @@ const Hero = () => {
               and
               <span className="font-semibold text-gray-800">
                 {" "}
-                Web Developer{" "}
+                Full Stack Web Developer{" "}
               </span>{" "}
               based in Dubai, UAE. I strive to build immersive and beautiful web
               applications through carefully crafted code and user-centric
