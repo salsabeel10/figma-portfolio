@@ -11,11 +11,11 @@ export const projects = [
 {
   id: 2,
   category: "E-Commerce",
-  title: "Shop Aura",
+  title: "BookNest",
   text: "A sleek online store with product filtering, cart, and checkout built using Next.js and MongoDB.",
-  image: "/projects/project-2.webp",
-  live: "https://shopaura-seven.vercel.app/", 
-  github: "https://github.com/salsabeel10/shopaura",
+  image: "/projects/project-5.png",
+  live: "https://book-nest-jet.vercel.app/", 
+  github: "https://github.com/salsabeel10/BookNest",
 },
 {
   id: 3,
@@ -28,6 +28,15 @@ export const projects = [
 },
 {
   id: 4,
+  category: "E-Commerce",
+  title: "Shop Aura",
+  text: "A sleek online store with product filtering, cart, and checkout built using Next.js and MongoDB.",
+  image: "/projects/project-2.webp",
+  live: "https://shopaura-seven.vercel.app/", 
+  github: "https://github.com/salsabeel10/shopaura",
+},
+{
+  id: 5,
   category: "Chat App",
   title: "Chatify",
   text: "A real-time chat application with authentication and media sharing using Socket.io and Express.",
