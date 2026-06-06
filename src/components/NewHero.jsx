@@ -29,8 +29,8 @@ export default function HeroSection({
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col items-start space-y-6 sm:space-y-8">
             <div
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e5e7eb] text-[#4b5563] text-[10px] font-bold uppercase tracking-widest animate-fade-in-up border border-slate-200/50"

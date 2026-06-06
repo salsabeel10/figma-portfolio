@@ -3,6 +3,8 @@ import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import NewHero from './components/NewHero';
+import NewStatsCard from './components/NewStatsCard';
+
 
 // Lazy load below-the-fold components
 const About = lazy(() => import('./components/About'));
@@ -21,6 +23,7 @@ const App = () => {
     <div>
       <Navbar />
       <NewHero />
+      <NewStatsCard />
       <Hero />
       <Suspense fallback={<div className="flex h-40 items-center justify-center text-gray-400">Loading content...</div>}>
         <About />
