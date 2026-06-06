@@ -98,26 +98,72 @@ const About = () => {
           </p>
 
           {/* Skills */}
-          <div className="mt-8 space-y-5">
-            {Object.entries(skills).map(([category, items]) => (
-              <div key={category}>
-                <h3 className="mb-3 text-sm font-semibold text-gray-500">
-                  {category}
-                </h3>
+          <div className="mt-10">
+            <div className="mb-6 flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-gray-800">
+              <span className="text-gray-500">{"</>"}</span>
+              Tech Stack Ecosystem
+            </div>
 
-                <div className="flex flex-wrap gap-3">
-                  {items.map((skill) => (
-                    <motion.span
-                      key={skill}
-                      whileHover={{ y: -4, scale: 1.04 }}
-                      className="rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm text-gray-700 shadow-sm transition hover:border-purple-300 hover:bg-purple-50 hover:text-purple-700"
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Frontend Development",
+                  icon: "💻",
+                  items: [
+                    "React",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "Bootstrap",
+                    "Redux",
+                    "Vite",
+                    "HTML5",
+                    "CSS3",
+                  ],
+                },
+                {
+                  title: "Backend Systems",
+                  icon: "⚙️",
+                  items: [
+                    "Node.js",
+                    "Express",
+                    "TypeScript",
+                    "JavaScript",
+                    "REST APIs",
+                  ],
+                },
+                {
+                  title: "Database Storage",
+                  icon: "🗄️",
+                  items: ["MongoDB", "PostgreSQL", "Redis"],
+                },
+                {
+                  title: "Utilities & Others",
+                  icon: "🚀",
+                  items: ["Python", "Git & GitHub", "Docker", "Vercel"],
+                },
+              ].map((section) => (
+                <div
+                  key={section.title}
+                  className="rounded-2xl border border-gray-50 bg-white p-5 shadow-sm hover:border-gray-200"
+                >
+                  <h3 className="mb-4 flex items-center gap-2 text-base font-semibold text-gray-900">
+                    <span>{section.icon}</span>
+                    {section.title}
+                  </h3>
+
+                  <div className="flex flex-wrap gap-2">
+                    {section.items.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700 transition-all duration-200 hover:border-purple-500 hover:bg-white"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Buttons */}
