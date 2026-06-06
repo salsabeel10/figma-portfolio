@@ -35,7 +35,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`relative transition-colors duration-300 ${
+                className={`relative group transition-colors duration-300 ${
                   index === 0
                     ? "text-[#1c1c1c]"
                     : "text-slate-500 hover:text-[#1c1c1c]"
@@ -43,9 +43,13 @@ export default function Navbar() {
               >
                 {link.label}
 
-                {index === 0 && (
-                  <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-[#1c1c1c]" />
-                )}
+                <span
+                  className={`absolute -bottom-2 left-0 h-[2px] bg-[#1c1c1c] origin-left transition-transform duration-300 ${
+                    index === 0
+                      ? "w-full scale-x-100"
+                      : "w-full scale-x-0 group-hover:scale-x-100"
+                  }`}
+                />
               </a>
             </li>
           ))}
