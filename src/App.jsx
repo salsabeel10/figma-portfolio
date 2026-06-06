@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import NewHero from './components/NewHero';
 import NewStatsCard from './components/NewStatsCard';
+import NewAbout from './components/NewAbout';
 
 
 // Lazy load below-the-fold components
@@ -24,6 +25,7 @@ const App = () => {
       <Navbar />
       <NewHero />
       <NewStatsCard />
+      <NewAbout />
       <Hero />
       <Suspense fallback={<div className="flex h-40 items-center justify-center text-gray-400">Loading content...</div>}>
         <About />
