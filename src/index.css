@@ -15,6 +15,46 @@
 html {
   scroll-behavior: smooth;
 }
+@keyframes premiumFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+@keyframes premiumGlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-premium-float {
+  animation: premiumFloat 6s ease-in-out infinite;
+}
+
+.animate-premium-glow {
+  animation: premiumGlow 5s ease-in-out infinite;
+}
+
+.animate-badge-float {
+  animation: badgeFloat 4s ease-in-out infinite;
+}
 
 /* Wrapper takes full width but keeps reCAPTCHA on the left */
 .recaptcha-wrapper {

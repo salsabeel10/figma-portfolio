@@ -2,6 +2,7 @@ import { ToastContainer } from 'react-toastify';
 import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import NewHero from './components/NewHero';
 
 // Lazy load below-the-fold components
 const About = lazy(() => import('./components/About'));
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <NewHero />
       <Hero />
       <Suspense fallback={<div className="flex h-40 items-center justify-center text-gray-400">Loading content...</div>}>
         <About />
