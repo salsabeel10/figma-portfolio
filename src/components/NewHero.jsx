@@ -1,16 +1,14 @@
 import React from "react";
 import { ArrowRight, Terminal } from "lucide-react";
 import heroImage from "../../public/images/salsabeel-1.webp";
+import { whatsapp } from "../data/links";
 
-export default function HeroSection({
-  onSayHelloClick,
-  heroImageUrl = heroImage,
-}) {
+export default function HeroSection({ heroImageUrl = heroImage }) {
   return (
     <section
-  id="home"
-  className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-0"
->
+      id="home"
+      className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-0"
+    >
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div
           className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1.5px,transparent_1.5px)] [background-size:24px_24px]"
@@ -29,8 +27,8 @@ export default function HeroSection({
         />
       </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col items-start space-y-6 sm:space-y-8">
             <div
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e5e7eb] text-[#4b5563] text-[10px] font-bold uppercase tracking-widest animate-fade-in-up border border-slate-200/50"
@@ -82,14 +80,15 @@ export default function HeroSection({
                 animationDuration: "0.8s",
               }}
             >
-              <button
-                type="button"
-                onClick={onSayHelloClick}
-                className="w-full sm:w-auto py-3.5 px-8 rounded-lg bg-[#1c1c1c] hover:bg-neutral-800 active:bg-black text-white font-display font-semibold text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-black/10 active:scale-95 flex items-center justify-center gap-2 group cursor-pointer border-none"
+              <a
+                href={whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto py-3.5 px-8 rounded-lg bg-[#1c1c1c] hover:bg-neutral-800 text-white font-display font-semibold text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-black/10 flex items-center justify-center gap-2 group"
               >
                 <span>Say Hello!</span>
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
 
               <a
                 href="#about"
@@ -145,7 +144,7 @@ export default function HeroSection({
                 </span>
               </div>
             </div>
-          </div >
+          </div>
         </div>
       </div>
     </section>
