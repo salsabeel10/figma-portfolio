@@ -10,6 +10,7 @@ import { FiArrowUpRight, FiDownload, FiFolder, FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { github, instagram, linkedin, whatsapp, resume } from "../data/links";
 
+// eslint-disable-next-line no-unused-vars
 const skills = {
   Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   Backend: ["Node.js", "Express", "REST APIs"],

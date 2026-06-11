@@ -9,7 +9,7 @@ export const stats = [
   },
   {
     id: 'projects',
-    value: '250+',
+    value: '100+',
     label: 'Project Completed',
     description:
       'Delivering high-performance web apps and services.',
@@ -17,7 +17,7 @@ export const stats = [
   },
   {
     id: 'clients',
-    value: '40+',
+    value: '30+',
     label: 'Happy Client',
     description:
       'Satisfied worldwide clients, innovative startup founders, and software teams.',

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { projects } from "../data/projects";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const PersonalProjects = () => {

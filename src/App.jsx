@@ -26,9 +26,9 @@ const App = () => {
       <NewHero />
       <NewStatsCard />
       <NewAbout />
-      <Hero />
+      {/* <Hero /> */}
       <Suspense fallback={<div className="flex h-40 items-center justify-center text-gray-400">Loading content...</div>}>
-        <About />
+        {/* <About /> */}
         <WorkProcess />
         <CompanyProjects />
         <Clients />
