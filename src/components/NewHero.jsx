@@ -9,7 +9,7 @@ export default function HeroSection({
   return (
     <section
   id="home"
-  className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden"
+  className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-0"
 >
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
         <div
