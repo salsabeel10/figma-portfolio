@@ -5,7 +5,7 @@ export const companyProjects = [
     title: "Al Ali Yachts",
     text: "Developed a responsive yacht rental website with booking integration and optimized SEO performance.",
     image: "/company_projects/Al_Ali_Yachts.webp",
-    link: "https://alaliyachts.com/yacht-rental-dubai/",
+    link: "https://alaliyachts.com/book-a-private-luxury-yacht-rental-in-dubai-today/",
   },
   {
     id: 2,
@@ -28,6 +28,6 @@ export const companyProjects = [
     title: "Xtreme Yacht",
     text: "Designed a premium yacht rental website with elegant visuals, smooth navigation, and a modern user experience.",
     image: "/company_projects/Xtreme_Yacht.webp",
-    link: "https://xtremeyacht.com/yacht-rental-summer-offer/",
+    link: "https://xtremeyacht.com/live-the-luxury-unforgettable-yacht-deals-youll-love-in-dubai/",
   },
   ];
