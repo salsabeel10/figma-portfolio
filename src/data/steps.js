@@ -1,5 +1,6 @@
 // steps.js
 import { FaCalendarAlt, FaChartLine, FaPencilAlt, FaLaptopCode } from "react-icons/fa";
+import { Search, BarChart3, PenTool, Rocket } from "lucide-react";
 
 export const steps = [
   {
@@ -28,4 +29,33 @@ export const steps = [
   text: "I test, deploy, and monitor the application, ensuring top performance and scalability post-launch.",
 },
 
+];
+
+
+
+export const steps1 = [
+  {
+    id: "1",
+    title: "Research",
+    text: "Understand goals and user needs to define the roadmap.",
+    icon: Search,
+  },
+  {
+    id: "2",
+    title: "Analyze",
+    text: "Plan architecture, database, APIs, and technology stack.",
+    icon: BarChart3,
+  },
+  {
+    id: "3",
+    title: "Design",
+    text: "Build responsive and intuitive user interfaces.",
+    icon: PenTool,
+  },
+  {
+    id: "4",
+    title: "Launch",
+    text: "Test, deploy, and monitor performance.",
+    icon: Rocket,
+  },
 ];
