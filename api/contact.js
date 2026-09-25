@@ -9,13 +9,51 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, subject, message } = req.body;
+    const { name, email, phone, subject, message, recaptchaToken } = req.body;
 
     // Validate required fields
     if (!name || !email || !message) {
       return res.status(400).json({
         success: false,
         message: "Name, email and message are required.",
+      });
+    }
+
+    // Verify reCAPTCHA
+    if (!recaptchaToken) {
+      return res.status(400).json({
+        success: false,
+        message: "reCAPTCHA verification required.",
+      });
+    }
+
+    const captchaParams = new URLSearchParams({
+      secret: process.env.RECAPTCHA_SECRET_KEY,
+      response: recaptchaToken,
+    });
+
+    const captchaResponse = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: captchaParams.toString(),
+      },
+    );
+
+    const captchaData = await captchaResponse.json();
+
+    if (!captchaData.success) {
+      console.error(
+        "reCAPTCHA verification failed:",
+        captchaData["error-codes"],
+      );
+
+      return res.status(400).json({
+        success: false,
+        message: "reCAPTCHA verification failed.",
       });
     }
 
@@ -31,7 +69,7 @@ export default async function handler(req, res) {
       `https://accounts.zoho.com/oauth/v2/token?${tokenParams.toString()}`,
       {
         method: "POST",
-      }
+      },
     );
 
     const tokenData = await tokenResponse.json();
@@ -48,43 +86,36 @@ export default async function handler(req, res) {
     const accessToken = tokenData.access_token;
 
     // 2. Create the Lead in Zoho CRM
-    const zohoResponse = await fetch(
-      "https://www.zohoapis.com/crm/v8/Leads",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Zoho-oauthtoken ${accessToken}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          data: [
-            {
-              Last_Name: name,
-              Email: email,
-              Phone: phone || "",
-              Description: [
-                subject ? `Subject: ${subject}` : "",
-                message ? `Message: ${message}` : "",
-              ]
-                .filter(Boolean)
-                .join("\n\n"),
-              Lead_Source: "Portfolio Website",
-            },
-          ],
-        }),
-      }
-    );
+    const zohoResponse = await fetch("https://www.zohoapis.com/crm/v8/Leads", {
+      method: "POST",
+      headers: {
+        Authorization: `Zoho-oauthtoken ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data: [
+          {
+            Last_Name: name,
+            Email: email,
+            Phone: phone || "",
+            Description: [
+              subject ? `Subject: ${subject}` : "",
+              message ? `Message: ${message}` : "",
+            ]
+              .filter(Boolean)
+              .join("\n\n"),
+            Lead_Source: "Portfolio Website",
+          },
+        ],
+      }),
+    });
 
     const zohoData = await zohoResponse.json();
 
     // 3. Check Zoho response
     const leadResult = zohoData?.data?.[0];
 
-    if (
-      !zohoResponse.ok ||
-      !leadResult ||
-      leadResult.status !== "success"
-    ) {
+    if (!zohoResponse.ok || !leadResult || leadResult.status !== "success") {
       console.error("Zoho Lead creation error:", zohoData);
 
       return res.status(500).json({

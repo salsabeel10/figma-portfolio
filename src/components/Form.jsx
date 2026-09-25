@@ -40,6 +40,7 @@ const Form = () => {
         phone: formEl.phone.value,
         subject: formEl.subject.value,
         message: formEl.message.value,
+        recaptchaToken: token,
       }),
     });
 
