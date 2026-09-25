@@ -1,6 +1,5 @@
 import { toast } from "react-toastify";
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = () => {
@@ -10,49 +9,60 @@ const Form = () => {
   const success = () => toast.success("Form Submitted!");
   const fail = () => toast.error("Error!");
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  const submitForm = async (e) => {
+  e.preventDefault();
 
-    const formEl = form.current;
+  const formEl = form.current;
 
-    // 1. Honeypot check
-    if (formEl._gotcha.value) {
-      console.warn("Bot detected – message blocked.");
-      return;
+  // Honeypot
+  if (formEl._gotcha.value) {
+    console.warn("Bot detected - message blocked.");
+    return;
+  }
+
+  // reCAPTCHA
+  const token = recaptchaRef.current.getValue();
+
+  if (!token) {
+    alert("Please verify that you're not a robot.");
+    return;
+  }
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formEl.name.value,
+        email: formEl.email.value,
+        phone: formEl.phone.value,
+        subject: formEl.subject.value,
+        message: formEl.message.value,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Submission failed");
     }
 
-    // 2. reCAPTCHA check
-    const token = recaptchaRef.current.getValue();
-    if (!token) {
-      alert("Please verify that you're not a robot.");
-      return;
-    }
+    console.log("Form submitted:", data);
 
-    // 3. Add timestamp
-    const currentTime = new Date().toLocaleString();
-    formEl.time.value = currentTime;
-
-    // 4. Send email
-    try {
-      const result = await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formEl,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
-      console.log("Email sent successfully:", result.text);
-      success();
-      recaptchaRef.current.reset(); // reset reCAPTCHA
-      formEl.reset();
-    } catch (error) {
-      console.error("Error sending email:", error.text);
-      fail();
-    }
-  };
+    success();
+    recaptchaRef.current.reset();
+    formEl.reset();
+  } catch (error) {
+    console.error("Form submission error:", error);
+    fail();
+  }
+};
 
   return (
     <div>
-      <form ref={form} onSubmit={sendEmail} className="space-y-5">
+      <form ref={form} onSubmit={submitForm} className="space-y-5">
         <input type="text" name="_gotcha" style={{ display: "none" }} />
         <input type="hidden" name="time" />
 
